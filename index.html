@@ -2,14 +2,41 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Geo Net practice project</title>
   </head>
   <body>
+    <div class="container" id="pageContainer">
 
-    <button>Get Measured</button>
-    <button>Get Reported</button>
+      <h1>Recent NZ Seismic Activity</h1>
+      <div class="row text-center">
+        <div class="col col-6 text-center">
+            <button class="btn btn-secondary" id="measuredButton">Get Measured Data</button>
+            <div class="col" id="measuredData">
+
+            </div>
+
+        </div>
+        <div class="col col-6 text-center">
+        <button class="btn btn-secondary"id="reportedButton">Get Reported Data</button>
+        <div class="col" id="reportedData">
+
+        </div>
+        </div>
+      </div>
+      <div id="map" class="container">
+
+      </div>
+    </div>
+
+    <!-- add containers for data x2 and make function to send data there -->
+
 
     <script src="node_modules/jquery/dist/jquery.min.js" charset="utf-8"></script>
-    <script src="js/script.js" charset="utf-8"></script>
+    <script src="node_modules/popper.js/dist/popper.min.js" charset="utf-8"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js" charset="utf-8"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiRaHG7pQAb9lR73PlhF8Y70vJTC4oO28&libraries=places"type="text/javascript"></script>
+    <script type="text/javascript" src="js/script.js" charset="utf-8"></script>
   </body>
 </html>
